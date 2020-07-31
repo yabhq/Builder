@@ -2,23 +2,22 @@
 
 namespace Yab\Laracogs;
 
-use Illuminate\Support\ServiceProvider;
-use Yab\Cerebrum\CerebrumProvider;
-use Yab\CrudMaker\CrudMakerProvider;
-use Yab\Crypto\CryptoProvider;
-use Yab\FormMaker\FormMakerProvider;
-use Yab\LaraTest\LaraTestProvider;
-use Yab\Laracogs\Console\Activity;
 use Yab\Laracogs\Console\Api;
-use Yab\Laracogs\Console\Billing;
-use Yab\Laracogs\Console\Bootstrap;
+use Yab\Crypto\CryptoProvider;
 use Yab\Laracogs\Console\Docs;
-use Yab\Laracogs\Console\Features;
 use Yab\Laracogs\Console\Logs;
-use Yab\Laracogs\Console\Notifications;
-use Yab\Laracogs\Console\Semantic;
-use Yab\Laracogs\Console\Socialite;
+use Yab\Laracogs\Console\Billing;
 use Yab\Laracogs\Console\Starter;
+use Yab\Cerebrum\CerebrumProvider;
+use Yab\Laracogs\Console\Activity;
+use Yab\Laracogs\Console\Features;
+use Yab\Laracogs\Console\Semantic;
+use Yab\Laracogs\Console\Bootstrap;
+use Yab\Laracogs\Console\Socialite;
+use Yab\CrudMaker\CrudMakerProvider;
+use Yab\FormMaker\FormMakerProvider;
+use Illuminate\Support\ServiceProvider;
+use Yab\Laracogs\Console\Notifications;
 
 class LaracogsProvider extends ServiceProvider
 {
@@ -45,7 +44,6 @@ class LaracogsProvider extends ServiceProvider
         $this->app->register(CryptoProvider::class);
         $this->app->register(CrudMakerProvider::class);
         $this->app->register(CerebrumProvider::class);
-        $this->app->register(LaraTestProvider::class);
 
         /*
         |--------------------------------------------------------------------------
